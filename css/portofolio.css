@@ -1,0 +1,86 @@
+/* navbar dan footer sama dengan index.css */
+
+
+/* main */
+main {
+  padding: 80px 0px 20px;
+}
+.main-judul {
+  margin: 10px 0px 20px;
+  line-height: 1.8em;
+}
+.main-judul h1 {
+  text-align: left;
+}
+.main-judul p {
+  font-family: sans-serif;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+.main-isi-portofolio img {
+  margin: 0px auto 40px;
+}
+.main-isi-portofolio {
+  position: relative;
+}
+.main-isi-portofolio .fas {
+  position: absolute;
+  cursor: pointer;
+}
+.main-isi-portofolio .fas:hover {
+  opacity: .7;
+}
+.main-isi-portofolio .fa-arrow-alt-circle-left {
+  left: 15%;
+  top: 50%;
+}
+.main-isi-portofolio .fa-arrow-alt-circle-right {
+  right: 15%;
+  top: 50%;
+}
+
+.main-isi-quote {
+  font-family: sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: right;
+  line-height: 1.8em;
+}
+
+
+/* footer */
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+
+
+/* responsive mobile */
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 20px 0px 20px;
+    font-size: 12px;
+  }
+  .main-judul h1 {
+    font-size: 18px;
+  }
+  .main-isi .main-isi-portofolio img {
+    width: 350px;
+  }
+  .main-isi-portofolio .fa-arrow-alt-circle-left {
+    left: 5%;
+    top: 50%;
+  }
+  .main-isi-portofolio .fa-arrow-alt-circle-right {
+    right: 5%;
+    top: 50%;
+  }
+
+  footer {
+    position: relative;
+  }
+}
