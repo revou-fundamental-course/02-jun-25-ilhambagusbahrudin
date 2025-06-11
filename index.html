@@ -52,6 +52,10 @@
   <!-- header -->
   <header>
     <div class="container">
+        <div class="slide fade" style="background-image: url('img/gurun-sahara.jpg');"></div>
+        <div class="slide fade" style="background-image: url('img/pantai.jpg');"></div>
+        <div class="slide fade" style="background-image: url('img/gunung.jpg');"></div>
+    </div>
       <div class="header-judul">
         <h1>Halo <span id="username"></span>, Welcome To My Website</h1>
         <p>Ini adalah website latihan yang ke-banyak saya hehe.</p>
@@ -282,6 +286,29 @@
     document.getElementById("nav-menu").classList.toggle("active");
   }
   </script>
+
+  <script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlides() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove("active");
+    });
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].classList.add("active");
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+  }
+
+  // Start the slideshow
+  showSlides();
+</script>
+
 
 </body>
 </html>

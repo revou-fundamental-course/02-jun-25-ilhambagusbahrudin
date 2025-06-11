@@ -74,7 +74,7 @@ nav .container {
 header {
   padding: 70px 0px 20px;
   border-bottom: 2px solid black;
-  background-image: url("../img/gurun-sahara.jpg");
+  /* background-image: url("../img/gurun-sahara.jpg"); */
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,6 +88,28 @@ header {
 /* .header-gambar img {
   max-width: 100%;
 } */
+
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
 
 
 /* headquarter */
@@ -162,7 +184,7 @@ footer .footer-program {
 
   nav {
     height: auto;
-    position: relative;
+    position: fixed;
   }
   nav .container {
     display: flex;
@@ -246,6 +268,10 @@ footer .footer-program {
   .headquarter-quote {
     width: 75%;
     font-size: 12px;
+  }
+
+  .slideshow-container {
+    height: 400px;
   }
 
 
