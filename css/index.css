@@ -94,9 +94,6 @@ header {
   padding: 20px;
   border-radius: 10px;
 }
-/* .header-gambar img {
-  max-width: 100%;
-} */
 
 /* Slideshow styles */
 .slideshow-container {
@@ -120,7 +117,6 @@ header {
   z-index: 1;
 }
 
-
 /* headquarter */
 .headquarter-quote {
   width: 50%;
@@ -129,7 +125,6 @@ header {
 .headquarter-quote marquee {
   padding: 10px 0px;
 }
-
 
 /* footer */
 footer {
@@ -159,6 +154,11 @@ footer .footer-program {
   font-weight: 500;
   font-size: 1.1em;
 }
+
+
+
+
+
 
 
 
