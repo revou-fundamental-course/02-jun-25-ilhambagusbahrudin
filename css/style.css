@@ -425,3 +425,22 @@ footer {
   left: 0;
   bottom: 0;
 }
+
+@media (max-width: 600px) {
+  .carousel {
+    grid-auto-columns: 100%;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+}
