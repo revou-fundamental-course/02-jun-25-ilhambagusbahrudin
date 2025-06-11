@@ -116,7 +116,8 @@
     grid-auto-columns: 100%;
   }
 
-  .wrapper i {
-    display: none; /* Hide arrows on very small screens */
-  }
+  /* .wrapper i { */
+    /* Hide arrows on very small screens */
+    /* display: none; */
+  /* } */
 }
