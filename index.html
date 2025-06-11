@@ -21,6 +21,62 @@
   <!-- css reset -->
   <link rel="stylesheet" href="reset-css.css">
 
+  <style>
+    .main-pesan {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .main-form, .main-data {
+      flex: 1;
+      min-width: 300px;
+      margin-bottom: 15rem;
+    }
+    .main-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 0.3rem;
+    }
+    textarea, input[type="text"], input[type="date"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .gender-options {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .main-data table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .main-data td {
+      padding: 0.5rem;
+    }
+    /* tombol kirim */
+    input[type="submit"] {
+      background-color: #19e7f8;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+  input[type="submit"]:hover {
+    background-color: #14c2d1;
+  }
+  </style>
+
 </head>
 <body>
 
@@ -40,7 +96,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="#profile">Our Profile</a></li>
-          <li><a href="all-page/message.html">Message Us</a></li>
+          <li><a href="#message-formm">Message Us</a></li>
         </ul>
       </div>
     </div>
@@ -194,6 +250,75 @@
   </main>
 </section>
 
+
+<section id="message-formm">
+<main>
+    <div class="container">
+      <div class="main-judul">
+        <h1>Isi data diri dan pesan Anda!</h1>
+      </div>
+      <div class="main-pesan">
+        <div class="main-form">
+          <form name="message-form" onsubmit="kirim(); return false">
+            <div class="form-group">
+              <label for="nama">Nama</label>
+              <input type="text" name="nama" id="nama" required>
+            </div>
+            <div class="form-group">
+              <label for="ttl">Tanggal Lahir</label>
+              <input type="date" name="ttl" id="ttl" required>
+            </div>
+            <div class="form-group">
+              <label for="gender">Jenis Kelamin</label>
+              <div class="gender-options">
+                <input type="radio" name="gender" id="laki-laki" value="Laki-laki" required>
+                <label for="laki-laki">Laki-laki</label>
+                <input type="radio" name="gender" id="perempuan" value="Perempuan" required>
+                <label for="perempuan">Perempuan</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="pesan">Pesan</label>
+              <textarea name="pesan" id="pesan" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" name="submit" value="Kirim">
+            </div>
+          </form>
+        </div>
+        <div class="main-data">
+          <table>
+            <tbody>
+              <tr class="td-waktu">
+                <td><label for="waktu">Waktu</label></td>
+                <td><span id="waktu"></span></td>
+              </tr>
+              <tr>
+                <td><label for="nama2">Nama</label></td>
+                <td><span id="nama2"></span></td>
+              </tr>
+              <tr>
+                <td><label for="ttl2">Tanggal Lahir</label></td>
+                <td><span id="ttl2"></span></td>
+              </tr>
+              <tr>
+                <td><label for="gender2">Jenis Kelamin</label></td>
+                <td><span id="gender2"></span></td>
+              </tr>
+              <tr>
+                <td><label for="pesan2">Pesan</label></td>
+                <td><span id="pesan2"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  </section>
+
+  <!-- file message javascript -->
+  <script src="js/message.js"></script>
 
   <!-- footer -->
   <footer>
