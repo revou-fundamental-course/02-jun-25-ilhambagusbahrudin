@@ -20,13 +20,13 @@ main {
 }
 .main-form table input[name="submit"] {
   width: 100%;
-  background-color: #fede3e;
+  background-color: #19e7f8;
   padding: 8px;
   border-radius: 5px;
   border: none;
 }
 .main-form table input[name="submit"]:hover {
-  background-color: #f3d22b;
+  background-color: #19e7f8;
   cursor: pointer;
 }
 /* .main-data {

@@ -26,7 +26,10 @@
           <img src="../img/federasi-jura-tempest.jpg" style="border-radius: 50%" alt="Federasi Jura Tempest" width="50">
         </a>
       </div>
-      <div class="nav-menu">
+      <div class="nav-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-menu" id="nav-menu">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="profile.html">Our Profile</a></li>
@@ -82,6 +85,13 @@
     </div>
   </footer>
   <!-- footer -->
+
+  <!-- toggle menu -->
+  <script>
+  function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("active");
+  }
+  </script>
 
 
 </body>
