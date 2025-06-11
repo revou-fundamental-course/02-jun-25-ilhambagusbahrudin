@@ -1,146 +1,122 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0 35px;
-    background: rgb(228, 220, 220);
-} */
-
 .wrapper {
-    max-width: 1000px;
-    width: 100%;
-    /* position: relative; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0 100px;
-    /* background: rgb(228, 220, 220); */
-
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .wrapper i {
-    height: 50px;
-    width: 100px;
-    background: #19e7f8;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    top: 50%;
-    font-size: 1.25 rem;
-    transform: translateY(-50%);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-
+  height: 40px;
+  width: 40px;
+  background: #19e7f8;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem; /* fixed invalid spacing */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  z-index: 1;
 }
 
-.wrapper i:first-child {
-    left: -22px;
-
+.wrapper i#left {
+  left: 0;
 }
 
-.wrapper i:last-child {
-    right: -22px;
-
+.wrapper i#right {
+  right: 0;
 }
 
 .wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 16px);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 .carousel::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .carousel :where(.card, .img) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.carousel.no-transition {
-    scroll-behavior: auto;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
 }
 
 .carousel.dragging .card {
-    cursor: grab;
-    user-select: none;
+  cursor: grabbing;
+  user-select: none;
 }
 
 .carousel .card {
-    scroll-snap-align: start;
-    height: 340px;
-    list-style: none;
-    background: #fff;
-    border-radius: 8px;
-    display: flex;
-    cursor: pointer;
-    width: 98%;
-    padding-bottom: 15px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  scroll-snap-align: start;
+  height: 340px;
+  list-style: none;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
 }
 
 .card .img {
-    background: green;
-    width: 145px;
-    height: 145px;
-    border-radius: 50%;
-
+  background: green;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
 }
 
 .card .img img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #fff;
+  width: 145px;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
 }
 
 .card h2 {
-    font-weight: 500;
-    font-size: 15px;
-    margin: 30px 0 5px;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 20px 0 5px;
 }
 
 .card span {
-    color: #6a6d78;
-    font-size: 1.31rem;
-
+  color: #6a6d78;
+  font-size: 1.2rem;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 900px) {
-    .wrapper .carousel {
-        grid-auto-columns: calc((100% / 2) - 9px);
-
-    }
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 12px);
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .wrapper .carousel {
-        grid-auto-columns: 100%;
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
 
-    }
+  .wrapper i {
+    display: none; /* Hide arrows on very small screens */
+  }
 }
