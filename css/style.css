@@ -4,6 +4,7 @@ body {
   background-color: whitesmoke;
 }
 
+
 .container {
   max-width: 1200px;
   margin: 0px auto;
@@ -164,8 +165,8 @@ header {
 
 /* Footer */
 footer {
-  height: 60px;
-  line-height: 60px;
+  padding: 40px 0;
+  line-height: 1.5;
   border-top: 2px solid black;
   font-size: 13px;
   font-style: italic;
@@ -174,26 +175,41 @@ footer {
 
 footer .container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; /* Menyebar elemen secara horizontal */
+  align-items: center; /* Vertikal center */
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 20px; /* Menambah jarak antara footer dengan konten lainnya */
+  margin-bottom: 20px; /* Memberi jarak di bagian bawah footer */
 }
 
 .footer-sosmed {
-  margin-top: 7px;
+  padding: 10px 50px 10px 10px;
+  display: flex;
+  justify-content: flex-start; /* Di kiri */
+  gap: 15px;
 }
 
-.footer-sosmed a {
-  margin: 0 15px;
+.footer-sosmed a i {
+  font-size: 24px;
+  transition: font-size 0.3s ease;
 }
 
 .footer-sosmed a i:hover {
   font-size: 30px;
 }
 
-footer .footer-program {
+.footer-program {
+  text-align: center;
   font-style: normal;
   font-weight: 500;
   font-size: 1.1em;
+  flex-grow: 1; /* Membuat div ini berkembang jika ada ruang kosong */
+}
+
+.footer-copyright {
+  text-align: right;
+  font-size: 0.9em;
 }
 
 /* Wrapper */
@@ -222,7 +238,7 @@ footer .footer-program {
   transform: translateY(-50%);
   font-size: 1.25rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-  z-index: 1;
+  z-index: 0;
 }
 
 .wrapper i#left {
@@ -349,14 +365,6 @@ main {
   font-weight: 100;
 }
 
-/* Footer for Profile */
-footer {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-}
-
 /* Message Page Styles */
 .main-pesan {
   display: flex;
@@ -429,14 +437,6 @@ input[type="submit"]:hover {
   border-bottom: 1px solid black;
 }
 
-/* Footer */
-footer {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-}
-
 @media (max-width: 600px) {
   .carousel {
     grid-auto-columns: 100%;
@@ -465,5 +465,27 @@ footer {
   }
   .nav-menu.active {
     display: flex;
+  }
+
+  /* footer */
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px; /* Tambahkan padding di footer untuk mobile */
+    margin-top: 20px; /* Jarak footer dengan konten di atasnya */
+  }
+  
+  .footer-sosmed a {
+    margin: 5px;
+  }
+  
+  footer .footer-program {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  footer .footer-copyright {
+    padding: 10px;
+    font-size: 0.8em;
   }
 }
