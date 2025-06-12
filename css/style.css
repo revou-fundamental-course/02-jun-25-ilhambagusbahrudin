@@ -1,7 +1,7 @@
 /* General Body */
 body {
-  font-family: Verdana, sans-serif;
-  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif !important; /* Mengganti font ke Roboto */
+  background-color: whitesmoke !important;
 }
 
 body, html {
@@ -35,6 +35,23 @@ h1 {
 /* Optional: Style untuk <h1> di dalam cabinet-title */
 .cabinet-title h1 {
   margin: 0; /* Menghapus margin default */
+}
+
+/* .profile-title {
+  
+} */
+
+.profile-title .main-judul {
+  text-align: center; /* Teks di tengah */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em; /* Ukuran font */
+  font-weight: bold; /* Teks lebih tebal */
+  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  -webkit-background-clip: text; /* Menempelkan gradient ke teks (untuk WebKit) */
+  -moz-background-clip: text; /* Menempelkan gradient ke teks (untuk Firefox) */
+  background-clip: text; /* Menempelkan gradient ke teks (standar) */
+  color: transparent; /* Menghapus warna teks agar gradient terlihat */
 }
 
 /* Navbar */
@@ -125,7 +142,7 @@ header {
   color: white;
   text-align: center;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
   padding: 20px;
   border-radius: 10px;
 }
