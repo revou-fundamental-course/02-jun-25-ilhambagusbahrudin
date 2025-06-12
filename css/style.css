@@ -26,7 +26,9 @@ h1 {
   font-size: 2em; /* Ukuran font */
   font-weight: bold; /* Agar lebih tebal */
   background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
-  -webkit-background-clip: text; /* Menempelkan gradient ke teks */
+  -webkit-background-clip: text; /* Menempelkan gradient ke teks (untuk WebKit) */
+  -moz-background-clip: text; /* Menempelkan gradient ke teks (untuk Firefox) */
+  background-clip: text; /* Menempelkan gradient ke teks (standar) */
   color: transparent; /* Menghapus warna teks agar gradient terlihat */
 }
 
