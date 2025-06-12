@@ -166,6 +166,49 @@ header {
   padding: 10px 0px;
 } */
 
+/* Profile Section */
+#profile {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+#profile .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Membuat elemen di dalam container wrap saat layar kecil */
+  gap: 20px;
+}
+
+/* Main Foto */
+.main-foto {
+  text-align: center;
+  flex: 1 1 200px; /* Flex Grow 1, Flex Shrink 1, dan Flex Basis 200px */
+}
+
+.main-foto img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.main-foto span {
+  font-size: 14px;
+  display: block;
+}
+
+/* Main About */
+.main-about {
+  flex: 2 1 500px; /* Flex Grow 2, Flex Shrink 1, dan Flex Basis 500px */
+  padding: 20px;
+  text-align: justify;
+  line-height: 1.6em;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
 /* Footer */
 footer {
   padding: 40px 0;
@@ -510,6 +553,30 @@ input[type="submit"]:hover {
   }
   .nav-menu.active {
     display: flex;
+  }
+
+  #profile .container {
+    flex-direction: column; /* Mengubah layout jadi kolom untuk perangkat kecil */
+    align-items: center; /* Memastikan konten di dalam container tetap terpusat */
+  }
+
+  /* Main Foto */
+  .main-foto {
+    flex: 0 1 200px; /* Membuat foto profil tetap di tengah */
+    margin-bottom: 20px; /* Menambah jarak antara foto dengan deskripsi */
+  }
+
+  /* Main About */
+  .main-about {
+    flex: 1 1 100%; /* Menjadikan deskripsi mengambil 100% lebar kontainer */
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Teks di dalam .main-about lebih kecil untuk mobile */
+  .main-about p {
+    font-size: 0.9rem;
   }
 
   /* footer */
