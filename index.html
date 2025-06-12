@@ -6,14 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Website Fiksi Pemerintah Federasi Jura Tempest - Karakter, Profil, dan Pesan">
   <meta name="keywords" content="Federasi Jura Tempest, anime, kabinet, profil, fantasy">
-
   <title>Federasi Jura Tempest</title>
 
   <!-- style.css -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- script.js -->
-  <!-- <script src="js/script.js" defer></script> -->
   
   <!-- AJAX, font awesome => icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -68,7 +64,6 @@
     <div class="header-judul">
       <h1>Halo <span id="username"></span>, Selamat Datang di Website Fiksi Pemerintah Federasi Jura Tempest</h1>
     </div>
-    
     </div>
   </header>
 
@@ -208,20 +203,26 @@
       <main>
           <!--  -->
           <div class="container">
+            <!--  -->
             <div class="main-judul">
               <h1>Isi data diri dan pesan Anda!</h1>
             </div>
+            <!--  -->
             <div class="main-pesan">
+              <!-- Input Data -->
               <div class="main-form">
                 <form name="message-form" onsubmit="kirim(); return false">
+                  <!-- Input Nama -->
                   <div class="form-group">
                     <label for="nama">Nama</label>
                     <input type="text" name="nama" id="nama" required>
                   </div>
+                  <!-- Input Tanggal Lahir -->
                   <div class="form-group">
                     <label for="ttl">Tanggal Lahir</label>
                     <input type="date" name="ttl" id="ttl" required>
                   </div>
+                  <!-- Input Jenis Kelamin -->
                   <div class="form-group">
                     <label for="gender">Jenis Kelamin</label>
                     <div class="gender-options">
@@ -231,15 +232,18 @@
                       <label for="perempuan">Perempuan</label>
                     </div>
                   </div>
+                  <!-- Input Pesan -->
                   <div class="form-group">
                     <label for="pesan">Pesan</label>
                     <textarea name="pesan" id="pesan" cols="30" rows="5" required></textarea>
                   </div>
+                  <!-- Button submit (tombol kirim) -->
                   <div class="form-group">
                     <input type="submit" name="submit" value="Kirim">
                   </div>
                 </form>
               </div>
+              <!-- Output Data -->
               <div class="main-data">
                 <table>
                   <tbody>
@@ -278,13 +282,18 @@
   <footer>
     <div class="container">
       <div class="footer-sosmed">
-        <a href="https://github.com/?" target="_blank">
+        <!-- icon github, akun github -->
+        <!-- <a href="#" target="_blank"> -->
+        <a href="#">
           <i class="fab fa-github fa-2x" style="color: #1d1a1a;"></i>
         </a>
-        <a href="https://linkedin.com/in/?" target="_blank">
+        <!-- icon linkedin, akun linkedin -->
+        <a href="#">
           <i class="fab fa-linkedin fa-2x" style="color: #2867B2;"></i>
         </a>
-        <a href="https://?.github.io" target="_blank">
+        <!-- icon github pages, link project yang publish -->
+        <!-- <a href="https://?.github.io" target="_blank"> -->
+          <a href="#">
           <i class="fas fa-blog fa-2x" style="color: #080808;"></i>
         </a>
       </div>
@@ -297,6 +306,8 @@
     </div>
   </footer>
 
+
+  <!-- Logika Draggable Card Slider -->
   <script>
       document.addEventListener("DOMContentLoaded", function() {
       const carousel = document.querySelector(".carousel");
@@ -321,20 +332,20 @@
       const dragging = (e) => {
           if (!isDragging) return;
       
-          // Calculate the new scroll position
+          // Hitung posisi gulir baru
           const newScrollLeft = startScrollLeft - (e.pageX - startX);
       
-          // Check if the new scroll position exceeds 
-          // the carousel boundaries
+          // Periksa apakah posisi gulir baru melebihi 
+          // batas korsel
           if (newScrollLeft <= 0 || newScrollLeft >= 
               carousel.scrollWidth - carousel.offsetWidth) {
               
-              // If so, prevent further dragging
+              // Jika iya, cegah penarikan lebih lanjut
               isDragging = false;
               return;
           }
       
-          // Otherwise, update the scroll position of the carousel
+          // Jika tidak, perbarui posisi gulir korsel
           carousel.scrollLeft = newScrollLeft;
       };
 
@@ -345,19 +356,19 @@
 
       const autoPlay = () => {
       
-          // Return if window is smaller than 800
+          // Kembalikan jika jendela lebih kecil dari 800
           if (window.innerWidth < 800) return; 
           
-          // Calculate the total width of all cards
+          // Hitung lebar total semua card
           const totalCardWidth = carousel.scrollWidth;
           
-          // Calculate the maximum scroll position
+          // Hitung posisi gulir maksimum
           const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
           
-          // If the carousel is at the end, stop autoplay
+          // Jika carousel berada di akhir, hentikan putar otomatis
           if (carousel.scrollLeft >= maxScrollLeft) return;
           
-          // Autoplay the carousel after every 2500ms
+          // Putar otomatis carousel setelah setiap 2500ms
           timeoutId = setTimeout(() => 
               carousel.scrollLeft += firstCardWidth, 2500);
       };
@@ -369,8 +380,8 @@
           clearTimeout(timeoutId));
       wrapper.addEventListener("mouseleave", autoPlay);
 
-      // Add event listeners for the arrow buttons to 
-      // scroll the carousel left and right
+      // Tambahkan event listener untuk tombol panah ke 
+      // gulirkan carousel ke kiri dan kanan
       arrowBtns.forEach(btn => {
           btn.addEventListener("click", () => {
               carousel.scrollLeft += btn.id === "left" ? 
@@ -380,10 +391,13 @@
   });
   </script>
 
+
+  <!-- Pop Up Javascript -->
   <script>
     let userName = prompt("Masukkan nama Anda dibawah!");
     document.getElementById("username").innerText = userName;
   </script>
+
 
   <!-- toggle menu -->
   <script>
@@ -398,6 +412,8 @@
   }
   </script> -->
 
+  
+  <!-- Slideshow Image -->
   <script>
   let slideIndex = 0;
   const slides = document.querySelectorAll(".slide");
