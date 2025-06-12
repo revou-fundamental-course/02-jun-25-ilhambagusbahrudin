@@ -157,14 +157,14 @@ header {
 }
 
 /* Headquarters */
-.headquarter-quote {
+/* .headquarter-quote {
   width: 50%;
   margin: 0 auto;
 }
 
 .headquarter-quote marquee {
   padding: 10px 0px;
-}
+} */
 
 /* Footer */
 footer {
@@ -209,7 +209,7 @@ footer .container {
   font-style: normal;
   font-weight: 500;
   font-size: 1.1em;
-  flex-grow: 1; /* Membuat div ini berkembang jika ada ruang kosong */
+  flex-grow: 1;
 }
 
 .footer-copyright {
