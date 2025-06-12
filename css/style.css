@@ -491,52 +491,6 @@ main {
   font-weight: 100;
 }
 
-/* Message Page Styles */
-.main-pesan {
-  display: flex;
-  gap: 2rem;
-}
-
-.main-form, .main-data {
-  flex: 1;
-  min-width: 300px;
-  margin-bottom: 15rem;
-}
-
-.main-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 0.3rem;
-}
-
-textarea, input[type="text"], input[type="date"] {
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-.gender-options {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.main-data table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.main-data td {
-  padding: 0.5rem;
-}
 
 /* Message Us */
 .main-pesan {
