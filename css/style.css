@@ -522,6 +522,75 @@ input[type="submit"]:hover {
   border-bottom: 1px solid black;
 }
 
+/* Message Us */
+.main-pesan {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .main-form, .main-data {
+      flex: 1;
+      min-width: 300px;
+      margin-bottom: 15rem;
+    }
+    .main-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 0.3rem;
+    }
+    textarea, input[type="text"], input[type="date"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .gender-options {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .main-data table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .main-data td {
+      padding: 0.5rem;
+    }
+    /* Tombol Kirim */
+input[type="submit"] {
+  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 50px; /* Membuat tombol lebih bulat */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transisi halus */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
+}
+
+/* Efek saat hover */
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #1e3c72, #00aaff); /* Membalik gradient saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan */
+  transform: scale(1.05); /* Memberikan efek membesar saat hover */
+}
+
+/* Efek saat klik */
+input[type="submit"]:active {
+  transform: scale(1); /* Mengembalikan ukuran tombol setelah diklik */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Mengurangi bayangan saat tombol ditekan */
+}
+
+  input[type="submit"]:hover {
+    background-color: #14c2d1;
+  }
+
 @media (max-width: 600px) {
   .carousel {
     grid-auto-columns: 100%;
