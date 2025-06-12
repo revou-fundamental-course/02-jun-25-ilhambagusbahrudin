@@ -494,57 +494,61 @@ main {
 
 /* Message Us */
 .main-pesan {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .main-form, .main-data {
-      flex: 1;
-      min-width: 300px;
-      margin-bottom: 15rem;
-    }
-    .main-form form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .form-group {
-      display: flex;
-      flex-direction: column;
-    }
-    label {
-      margin-bottom: 0.3rem;
-    }
-    textarea, input[type="text"], input[type="date"] {
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-    .gender-options {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-    .main-data table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .main-data td {
-      padding: 0.5rem;
-    }
-    /* Tombol Kirim */
-      input[type="submit"] {
-        background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border-radius: 50px; /* Membuat tombol lebih bulat */
-        cursor: pointer;
-        transition: all 0.3s ease-in-out; /* Transisi halus */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
-      }
-
-      /* Efek saat hover */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;   /* Ini penting */
+  max-width: 1000px;         /* Atur lebar maksimal */
+  margin: 0 auto;            /* Ini juga penting */
+  padding: 0 20px;           /* Tambahan agar ada ruang kiri-kanan */
+}
+}
+.main-form, .main-data {
+  flex: 1;
+  min-width: 300px;
+  margin-bottom: 15rem;
+}
+.main-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 0.3rem;
+}
+textarea, input[type="text"], input[type="date"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.gender-options {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-data table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.main-data td {
+  padding: 0.5rem;
+}
+/* Tombol Kirim */
+input[type="submit"] {
+  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 50px; /* Membuat tombol lebih bulat */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transisi halus */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
+}
+ /* Efek saat hover */
       input[type="submit"]:hover {
         background: linear-gradient(135deg, #1e3c72, #00aaff); /* Membalik gradient saat hover */
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan */
