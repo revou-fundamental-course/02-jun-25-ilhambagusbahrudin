@@ -5,7 +5,7 @@ body {
 }
 
 body, html {
-  overflow-x: hidden;
+  overflow-x: hidden; /* menghilangkan (menyembunyikan) scroll horizontal */
 }
 
 .container {
@@ -255,6 +255,15 @@ footer .container {
   right: 0;
 }
 
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
+
+
 .wrapper .carousel {
   display: grid;
   grid-auto-flow: column;
@@ -446,6 +455,36 @@ input[type="submit"]:hover {
 @media (max-width: 600px) {
   .carousel {
     grid-auto-columns: 100%;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .carousel .card {
+    width: 100%; /* agar cukup lebar di layar kecil */
+  }
+
+  .wrapper .carousel {
+        grid-auto-columns: 100%;
+
+    }
+
+  .card .img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card .img img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card span {
+    font-size: 0.9rem;
   }
   .nav-menu ul {
     display: flex;
