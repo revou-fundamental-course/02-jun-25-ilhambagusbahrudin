@@ -456,6 +456,7 @@ main {
 }
 
 .main-judul h1 {
+  padding-left: 20px;
   text-align: center;
 }
 
