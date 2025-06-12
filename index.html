@@ -24,33 +24,32 @@
   <!-- font Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-
-
 </head>
 <body>
 
+
   <!-- navbar -->
-<nav>
-  <div class="container">
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="img/federasi-jura-tempest.jpg" style="border-radius: 50%" alt="Federasi Jura Tempest" width="50">
-      </a>
+  <nav>
+    <div class="container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="img/federasi-jura-tempest.jpg" style="border-radius: 50%" alt="Federasi Jura Tempest" width="50">
+        </a>
+      </div>
+      <!-- toggle menu -->
+      <div class="nav-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <!-- navbar links -->
+      <div class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#profile">Our Profile</a></li>
+          <li><a href="#message-formm">Message Us</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- toggle menu -->
-    <div class="nav-toggle" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
-    <!-- navbar links -->
-    <div class="nav-menu" id="nav-menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#profile">Our Profile</a></li>
-        <li><a href="#message-formm">Message Us</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 
   <!-- header -->
@@ -59,13 +58,13 @@
     <div class="slide fade" style="background-image: url('img/cabinet.jpg');"></div>
     <div class="slide fade" style="background-image: url('img/tempest_city.jpg');"></div>
     <div class="slide fade" style="background-image: url('img/world_map.jpg');"></div>
-
+    <!-- Slideshow Indicators -->
     <div class="dots-container">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-
+    <!--  -->
     <div class="header-judul">
       <h1>Halo <span id="username"></span>, Selamat Datang di Website Fiksi Pemerintah Federasi Jura Tempest</h1>
     </div>
@@ -73,11 +72,12 @@
     </div>
   </header>
 
-  <!-- Card Slider -->
-    <div class="cabinet-title">
-      <h1>The Cabinet</h1>
-    </div>
-  <div class="wrapper">
+
+  <div class="cabinet-title">
+     <h1>The Cabinet</h1>
+  </div>
+    <!-- Draggable Card Slider -->
+    <div class="wrapper">
         <i id="left" class="fa-solid  fas fa-angle-left"></i>
         <ul class="carousel">
             <li class="card">
@@ -165,11 +165,6 @@
                 <h2 style="color: black; font-weight:bold;">Kepala Jaksa Penuntut Umum</h2>
                 <span>Ultima</span>
             </li>
-            <!-- <li class="card">
-                <div class="img"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20240213150115/ppp.png" alt="" draggable="false"> </div>
-                <h2 style="color: green; font-weight:bold;">GeeksforGeeks</h2>
-                <span>Coding Platform</span>
-            </li> -->
         </ul>
         <i id="right" class="fa-solid fas fa-angle-right"></i>
     </div>
@@ -179,19 +174,25 @@
         <marquee behavior="" direction="" width="100%" vspace="20px">Terimakasih telah berkunjung di website fiksi Pemerintah Federasi Jura Tempest...</marquee>
     </div> -->
 
+
     <!-- Profile Section -->
     <section class="profile-title" id="profile">
       <main>
+        <!-- container -->
         <div class="container">
+          <!-- Profil Saya -->
           <div class="main-judul">
             <h1>Profil Saya</h1>
           </div>
+          <!--  -->
           <div class="main-isi">
+            <!-- Foto Profile -->
             <div class="main-foto">
               <img src="img/Ferdinand-E-Marcos-1972.jpg" alt="foto-profil">
               <br>
               <span>Fresh Graduate | Tech Enthusiast</span>
             </div>
+            <!-- About -->
             <div class="main-about">
               <p>Hallo, perkenalkan nama saya Ilham Bagus Bahrudin. Saya adalah Fresh Graduate dari Universitas Muhammadiyah Ponorogo jurusan S1 Teknik Informatika.</p>
               <p>Saat ini saya sedang fokus belajar di bidang khusus di dalam IT yaitu Front-End Development.</p>
@@ -202,74 +203,76 @@
     </section>
 
 
+    <!-- Message Form -->
     <section id="message-formm">
-    <main>
-        <div class="container">
-          <div class="main-judul">
-            <h1>Isi data diri dan pesan Anda!</h1>
-          </div>
-          <div class="main-pesan">
-            <div class="main-form">
-              <form name="message-form" onsubmit="kirim(); return false">
-                <div class="form-group">
-                  <label for="nama">Nama</label>
-                  <input type="text" name="nama" id="nama" required>
-                </div>
-                <div class="form-group">
-                  <label for="ttl">Tanggal Lahir</label>
-                  <input type="date" name="ttl" id="ttl" required>
-                </div>
-                <div class="form-group">
-                  <label for="gender">Jenis Kelamin</label>
-                  <div class="gender-options">
-                    <input type="radio" name="gender" id="laki-laki" value="Laki-laki" required>
-                    <label for="laki-laki">Laki-laki</label>
-                    <input type="radio" name="gender" id="perempuan" value="Perempuan" required>
-                    <label for="perempuan">Perempuan</label>
+      <main>
+          <!--  -->
+          <div class="container">
+            <div class="main-judul">
+              <h1>Isi data diri dan pesan Anda!</h1>
+            </div>
+            <div class="main-pesan">
+              <div class="main-form">
+                <form name="message-form" onsubmit="kirim(); return false">
+                  <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama" id="nama" required>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="pesan">Pesan</label>
-                  <textarea name="pesan" id="pesan" cols="30" rows="5" required></textarea>
-                </div>
-                <div class="form-group">
-                  <input type="submit" name="submit" value="Kirim">
-                </div>
-              </form>
-            </div>
-            <div class="main-data">
-              <table>
-                <tbody>
-                  <tr class="td-waktu">
-                    <td><label for="waktu">Waktu</label></td>
-                    <td><span id="waktu"></span></td>
-                  </tr>
-                  <tr>
-                    <td><label for="nama2">Nama</label></td>
-                    <td><span id="nama2"></span></td>
-                  </tr>
-                  <tr>
-                    <td><label for="ttl2">Tanggal Lahir</label></td>
-                    <td><span id="ttl2"></span></td>
-                  </tr>
-                  <tr>
-                    <td><label for="gender2">Jenis Kelamin</label></td>
-                    <td><span id="gender2"></span></td>
-                  </tr>
-                  <tr>
-                    <td><label for="pesan2">Pesan</label></td>
-                    <td><span id="pesan2"></span></td>
-                  </tr>
-                </tbody>
-              </table>
+                  <div class="form-group">
+                    <label for="ttl">Tanggal Lahir</label>
+                    <input type="date" name="ttl" id="ttl" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="gender">Jenis Kelamin</label>
+                    <div class="gender-options">
+                      <input type="radio" name="gender" id="laki-laki" value="Laki-laki" required>
+                      <label for="laki-laki">Laki-laki</label>
+                      <input type="radio" name="gender" id="perempuan" value="Perempuan" required>
+                      <label for="perempuan">Perempuan</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="pesan">Pesan</label>
+                    <textarea name="pesan" id="pesan" cols="30" rows="5" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" name="submit" value="Kirim">
+                  </div>
+                </form>
+              </div>
+              <div class="main-data">
+                <table>
+                  <tbody>
+                    <tr class="td-waktu">
+                      <td><label for="waktu">Waktu</label></td>
+                      <td><span id="waktu"></span></td>
+                    </tr>
+                    <tr>
+                      <td><label for="nama2">Nama</label></td>
+                      <td><span id="nama2"></span></td>
+                    </tr>
+                    <tr>
+                      <td><label for="ttl2">Tanggal Lahir</label></td>
+                      <td><span id="ttl2"></span></td>
+                    </tr>
+                    <tr>
+                      <td><label for="gender2">Jenis Kelamin</label></td>
+                      <td><span id="gender2"></span></td>
+                    </tr>
+                    <tr>
+                      <td><label for="pesan2">Pesan</label></td>
+                      <td><span id="pesan2"></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </div>
       </main>
-      </section>
+    </section>
 
-  <!-- file message javascript -->
-  <script src="js/message.js"></script>
+    <!-- file message javascript -->
+    <script src="js/message.js"></script>
 
   <!-- footer -->
   <footer>
