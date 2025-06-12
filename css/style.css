@@ -189,7 +189,7 @@ header {
 }
 
 .dot.active {
-  background: linear-gradient(45deg, #19e7f8, #9b59b6, #3498db);
+  background: linear-gradient(135deg, #00aaff, #1e3c72, #3498db);
   border-radius: 50%;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -525,31 +525,6 @@ textarea, input[type="text"], input[type="date"] {
   padding: 0.5rem;
 }
 
-/* Submit Button */
-input[type="submit"] {
-  background-color: #19e7f8;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-  background-color: #14c2d1;
-}
-
-/* Message Page Table Styles */
-.main-data table td {
-  padding: 12px;
-}
-
-.main-data .td-waktu {
-  border-bottom: 1px solid black;
-}
-
 /* Message Us */
 .main-pesan {
       display: flex;
@@ -590,34 +565,34 @@ input[type="submit"]:hover {
       padding: 0.5rem;
     }
     /* Tombol Kirim */
-input[type="submit"] {
-  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 50px; /* Membuat tombol lebih bulat */
-  cursor: pointer;
-  transition: all 0.3s ease-in-out; /* Transisi halus */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
-}
+      input[type="submit"] {
+        background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 50px; /* Membuat tombol lebih bulat */
+        cursor: pointer;
+        transition: all 0.3s ease-in-out; /* Transisi halus */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
+      }
 
-/* Efek saat hover */
-input[type="submit"]:hover {
-  background: linear-gradient(135deg, #1e3c72, #00aaff); /* Membalik gradient saat hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan */
-  transform: scale(1.05); /* Memberikan efek membesar saat hover */
-}
+      /* Efek saat hover */
+      input[type="submit"]:hover {
+        background: linear-gradient(135deg, #1e3c72, #00aaff); /* Membalik gradient saat hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan */
+        transform: scale(1.05); /* Memberikan efek membesar saat hover */
+      }
 
-/* Efek saat klik */
-input[type="submit"]:active {
-  transform: scale(1); /* Mengembalikan ukuran tombol setelah diklik */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Mengurangi bayangan saat tombol ditekan */
-}
+      /* Efek saat klik */
+      input[type="submit"]:active {
+        transform: scale(1); /* Mengembalikan ukuran tombol setelah diklik */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Mengurangi bayangan saat tombol ditekan */
+      }
 
-  input[type="submit"]:hover {
-    background-color: #14c2d1;
-  }
+        input[type="submit"]:hover {
+          background-color: #14c2d1;
+        }
 
 @media (max-width: 600px) {
   .carousel {
