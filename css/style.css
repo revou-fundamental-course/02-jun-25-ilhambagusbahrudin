@@ -18,6 +18,23 @@ h1 {
   font-size: 1.5em;
 }
 
+/* Cabinet Title */
+.cabinet-title {
+  text-align: center; /* Teks di tengah */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Jarak antara teks dan wrapper */
+  font-size: 2em; /* Ukuran font */
+  font-weight: bold; /* Agar lebih tebal */
+  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  -webkit-background-clip: text; /* Menempelkan gradient ke teks */
+  color: transparent; /* Menghapus warna teks agar gradient terlihat */
+}
+
+/* Optional: Style untuk <h1> di dalam cabinet-title */
+.cabinet-title h1 {
+  margin: 0; /* Menghapus margin default */
+}
+
 /* Navbar */
 nav {
   height: 60px;
@@ -59,7 +76,7 @@ nav .container {
 }
 
 .nav-menu a:hover {
-  background-color: #19e7f8;
+  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
   color: #fff;
 }
 
