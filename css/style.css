@@ -502,7 +502,7 @@ main {
   margin: 0 auto;            /* Ini juga penting */
   padding: 0 20px;           /* Tambahan agar ada ruang kiri-kanan */
 }
-}
+
 .main-form, .main-data {
   flex: 1;
   min-width: 300px;
