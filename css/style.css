@@ -63,7 +63,7 @@ nav .container {
   color: #fff;
 }
 
-/* Hamburger Menu */
+/* Toggle (Hamburger Menu) */
 .nav-toggle {
   display: none;
   font-size: 24px;
@@ -76,7 +76,7 @@ nav .container {
   padding: 10px;
 }
 
-/* Toggle navbar when clicked */
+/* Toggle navbar ketika diklik */
 .nav-menu.active {
   display: flex;
 }
