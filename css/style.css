@@ -292,25 +292,35 @@ footer .container {
 }
 
 .wrapper i {
-  height: 40px;
-  width: 40px;
-  background: #19e7f8;
+  height: 50px; /* Membesarkan ukuran untuk memperjelas tombol */
+  width: 50px; /* Membesarkan ukuran */
+  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
   text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
+  line-height: 50px; /* Menyesuaikan dengan tinggi button */
+  border-radius: 50%; /* Bentuk bulat */
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.25rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-size: 1.5rem; /* Membesarkan ikon */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Memberikan bayangan lebih besar */
   z-index: 0;
+  transition: all 0.3s ease-in-out; /* Transisi halus saat perubahan */
+  border: 2px solid #fff; /* Border putih untuk kontras */
 }
 
+/* Efek hover */
+.wrapper i:hover {
+  transform: translateY(-50%) scale(1.1); /* Memberikan efek zoom sedikit */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Meningkatkan bayangan saat hover */
+}
+
+/* Untuk tombol kiri */
 .wrapper i#left {
   left: 0;
 }
 
+/* Untuk tombol kanan */
 .wrapper i#right {
   right: 0;
 }

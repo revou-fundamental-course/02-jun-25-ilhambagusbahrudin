@@ -60,17 +60,31 @@
     .main-data td {
       padding: 0.5rem;
     }
-    /* tombol kirim */
-    input[type="submit"] {
-      background-color: #19e7f8;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+    /* Tombol Kirim */
+input[type="submit"] {
+  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 50px; /* Membuat tombol lebih bulat */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transisi halus */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
+}
+
+/* Efek saat hover */
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #1e3c72, #00aaff); /* Membalik gradient saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan */
+  transform: scale(1.05); /* Memberikan efek membesar saat hover */
+}
+
+/* Efek saat klik */
+input[type="submit"]:active {
+  transform: scale(1); /* Mengembalikan ukuran tombol setelah diklik */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Mengurangi bayangan saat tombol ditekan */
+}
 
   input[type="submit"]:hover {
     background-color: #14c2d1;
