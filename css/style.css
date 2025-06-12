@@ -254,6 +254,19 @@ header {
   margin-top: 30px;
 }
 
+.message_form .main-judul {
+  text-align: center; /* Teks di tengah */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em; /* Ukuran font */
+  font-weight: bold; /* Teks lebih tebal */
+  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  -webkit-background-clip: text; /* Menempelkan gradient ke teks (untuk WebKit) */
+  -moz-background-clip: text; /* Menempelkan gradient ke teks (untuk Firefox) */
+  background-clip: text; /* Menempelkan gradient ke teks (standar) */
+  color: transparent; /* Menghapus warna teks agar gradient terlihat */
+}
+
 /* Footer */
 footer {
   padding: 40px 0;
@@ -443,7 +456,7 @@ main {
 }
 
 .main-judul h1 {
-  text-align: left;
+  text-align: center;
 }
 
 .main-isi {
