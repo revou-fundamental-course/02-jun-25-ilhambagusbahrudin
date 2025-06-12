@@ -189,7 +189,16 @@ header {
 }
 
 .dot.active {
-  background-color: #19e7f8;
+  background: linear-gradient(45deg, #19e7f8, #9b59b6, #3498db);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* transition: transform 0.7s ease, box-shadow 0.3s ease; */
+}
+
+.dot.active:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Headquarters */
