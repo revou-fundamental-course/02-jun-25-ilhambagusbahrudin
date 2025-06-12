@@ -81,26 +81,28 @@
 <body>
 
   <!-- navbar -->
-  <nav>
-    <div class="container">
-      <div class="nav-logo">
-        <a href="img/federasi-jura-tempest.jpg" target="_blank">
-          <img src="img/federasi-jura-tempest.jpg" style="border-radius: 50%" alt="Federasi Jura Tempest" width="50">
-        </a>
-      </div>
-      <!-- toggle menu -->
-      <div class="nav-toggle" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-      <div class="nav-menu" id="nav-menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#profile">Our Profile</a></li>
-          <li><a href="#message-formm">Message Us</a></li>
-        </ul>
-      </div>
+<nav>
+  <div class="container">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="img/federasi-jura-tempest.jpg" style="border-radius: 50%" alt="Federasi Jura Tempest" width="50">
+      </a>
     </div>
-  </nav>
+    <!-- toggle menu -->
+    <div class="nav-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <!-- navbar links -->
+    <div class="nav-menu" id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#profile">Our Profile</a></li>
+        <li><a href="#message-formm">Message Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
   <!-- header -->
   <header>
@@ -438,6 +440,12 @@
     document.getElementById("nav-menu").classList.toggle("active");
   }
   </script>
+  <!-- <script>
+  function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('active');
+  }
+  </script> -->
 
   <script>
   let slideIndex = 0;

@@ -72,6 +72,17 @@ nav .container {
   padding: 10px;
 }
 
+/* Toggle navbar when clicked */
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 /* Header */
 header {
   padding: 70px 0px 20px;
@@ -431,14 +442,26 @@ footer {
     grid-auto-columns: 100%;
   }
   .nav-menu ul {
+    display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+  .nav-menu ul li {
+    margin: 10px 0;
   }
   .nav-toggle {
     display: block;
   }
+  /* Adjust navbar layout for small screens */
   .nav-menu {
-    display: none;
+    display: none; /* Hide navbar by default */
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
     flex-direction: column;
+    text-align: center;
   }
   .nav-menu.active {
     display: flex;
