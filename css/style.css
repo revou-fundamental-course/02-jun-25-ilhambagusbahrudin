@@ -227,28 +227,28 @@ header {
   /* text-align: center; */
 }
 
-/* Main Foto */
-.main-foto {
+#profile .main-foto {
   text-align: center;
   flex: 1 1 200px; /* Flex Grow 1, Flex Shrink 1, dan Flex Basis 200px */
 }
 
-.main-foto img {
+#profile .main-foto img {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
+  border-radius: 25px;
+  /* border-radius: 50%; */
   margin-bottom: 10px;
 }
 
-.main-foto span {
+#profile .main-foto span {
   font-size: 14px;
   display: block;
 }
 
-/* Main About */
-.main-about {
+#profile .main-about {
   flex: 2 1 500px; /* Flex Grow 2, Flex Shrink 1, dan Flex Basis 500px */
   padding: 20px;
+  /* padding: 30px 150px; */
   text-align: justify;
   line-height: 1.6em;
   background-color: #fff;
@@ -257,6 +257,14 @@ header {
   margin-top: 30px;
 }
 
+#profile .main-about p {
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+
+
+/* Message Us */
 .message_form .main-judul {
   text-align: center; /* Teks di tengah */
   margin-top: 20px;
