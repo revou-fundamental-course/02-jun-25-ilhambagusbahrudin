@@ -1,7 +1,7 @@
 /* General Body */
-body {
-  font-family: 'Roboto', sans-serif !important; /* Mengganti font ke Roboto */
-  background-color: whitesmoke !important;
+html body {
+  font-family: 'Roboto', sans-serif;
+  background-color: whitesmoke;
 }
 
 body, html {
