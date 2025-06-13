@@ -9,7 +9,7 @@ html body {
   overflow-x: hidden;
 } */
 
-/* metode lain selain memakai property overflow-x: hidden; [lihat kode css di atas] */
+/* metode lain selain memakai property overflow-x: hidden; [lihat kode css yang di komen] */
 /* Pastikan semua elemen tidak melebihi lebar viewport */
 *, *::before, *::after {
   box-sizing: border-box;
