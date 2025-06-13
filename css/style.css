@@ -4,12 +4,19 @@ html body {
   background-color: whitesmoke;
 }
 
-body, html {
-  overflow-x: hidden; /* menghilangkan (menyembunyikan) scroll horizontal */
+/* body, html {
+  menghilangkan (menyembunyikan) scroll horizontal
+  overflow-x: hidden;
+} */
+
+/* metode lain selain memakai property overflow-x: hidden; [lihat kode css di atas] */
+/* Pastikan semua elemen tidak melebihi lebar viewport */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 99.2%;
   margin: 0px auto;
 }
 
@@ -319,10 +326,10 @@ footer .container {
   font-size: 0.9em;
 }
 
-/* Wrapper */
+/* Wrapper untuk Draggable Card Slider*/
 .wrapper {
-  max-width: 1000px;
-  width: 100%;
+  max-width: 70%;
+  /* width: 100%; */
   position: relative;
   display: flex;
   align-items: center;
