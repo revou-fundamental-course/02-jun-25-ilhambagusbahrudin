@@ -569,10 +569,6 @@ input[type="submit"] {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Mengurangi bayangan saat tombol ditekan */
       }
 
-        input[type="submit"]:hover {
-          background-color: #14c2d1;
-        }
-
 @media (max-width: 600px) {
   .carousel {
     grid-auto-columns: 100%;
