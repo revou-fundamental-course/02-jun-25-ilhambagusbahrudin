@@ -1,36 +1,58 @@
 console.log('ok');
 
-// Isi form
-function kirim() {
-  // array nama bulan
-  const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "Desember"];
 
-  // membuat waktu saat ini
-  let date = new Date();
-  let tanggal = date.getDate() + " " + (bulan[date.getMonth()]) + " " + date.getFullYear();
-  let jam = date.getHours() + ":" + date.getMinutes();
+// Toggle Menu
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+// function toggleMenu() {
+//   const menu = document.getElementById('nav-menu');
+//   menu.classList.toggle('active');
+// }
 
-  waktuIni = jam + ", " + tanggal
+// toggle menu (hamburger menu) menutup ketika klik "Esc" di keyboard
+document.addEventListener("keydown", function (event) {
+  // Jika tombol yang ditekan adalah Escape
+  if (event.key === "Escape") {
+    const navMenu = document.getElementById("nav-menu");
+    // Tutup menu jika sedang terbuka
+    if (navMenu.classList.contains("active")) {
+      navMenu.classList.remove("active");
+    }
+  }
+});
 
-  // mengambil data input fom
-  let nama = document.forms["message-form"]["nama"].value;
-  let ttl = document.forms["message-form"]["ttl"].value;
-  let gender = document.forms["message-form"]["gender"].value;
-  let pesan = document.forms["message-form"]["pesan"].value;
 
-  // validasi form ke-2 | validasi form pertama memakai atribut required pada tag input form
-  if (nama === "" || ttl === "" || gender === "" || pesan === "") {
-    alert("Input form tidak boleh kosong!");
-    return false;
+// Slideshow Image
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlides() {
+  slides.forEach((slide, index) => {
+    slide.classList.remove("active");
+  });
+
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
   }
 
-  // DOM element lalu diberi isi dari form
-  document.getElementById("waktu").innerText = waktuIni;
-  document.getElementById("nama2").innerText = nama;
-  document.getElementById("ttl2").innerText = ttl;
-  document.getElementById("gender2").innerText = gender;
-  document.getElementById("pesan2").innerText = pesan;
+  slides[slideIndex - 1].classList.add("active");
+  dots[slideIndex - 1].classList.add("active");
+
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
+
+function currentSlide(n) {
+  slideIndex = n - 1; // subtract 1 since showSlides() will increment it
+  showSlides();
+}
+
+// Start the slideshow
+showSlides();
 
 
 // Logika Draggable Card Slider
@@ -116,56 +138,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Toggle Menu
-function toggleMenu() {
-  document.getElementById("nav-menu").classList.toggle("active");
-}
-// function toggleMenu() {
-//   const menu = document.getElementById('nav-menu');
-//   menu.classList.toggle('active');
-// }
+// Isi Data Diri (Message Us)
+function kirim() {
+  // array nama bulan
+  const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "Desember"];
 
+  // membuat waktu saat ini
+  let date = new Date();
+  let tanggal = date.getDate() + " " + (bulan[date.getMonth()]) + " " + date.getFullYear();
+  let jam = date.getHours() + ":" + date.getMinutes();
 
-// Slideshow Image
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+  waktuIni = jam + ", " + tanggal
 
-function showSlides() {
-  slides.forEach((slide, index) => {
-    slide.classList.remove("active");
-  });
+  // mengambil data input fom
+  let nama = document.forms["message-form"]["nama"].value;
+  let ttl = document.forms["message-form"]["ttl"].value;
+  let gender = document.forms["message-form"]["gender"].value;
+  let pesan = document.forms["message-form"]["pesan"].value;
 
-  dots.forEach(dot => dot.classList.remove("active"));
-
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
+  // validasi form ke-2 | validasi form pertama memakai atribut required pada tag input form
+  if (nama === "" || ttl === "" || gender === "" || pesan === "") {
+    alert("Input form tidak boleh kosong!");
+    return false;
   }
 
-  slides[slideIndex - 1].classList.add("active");
-  dots[slideIndex - 1].classList.add("active");
-
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
+  // DOM element lalu diberi isi dari form
+  document.getElementById("waktu").innerText = waktuIni;
+  document.getElementById("nama2").innerText = nama;
+  document.getElementById("ttl2").innerText = ttl;
+  document.getElementById("gender2").innerText = gender;
+  document.getElementById("pesan2").innerText = pesan;
 }
-
-function currentSlide(n) {
-  slideIndex = n - 1; // subtract 1 since showSlides() will increment it
-  showSlides();
-}
-
-// toggle menu (hamburger menu) menutup ketika klik "Esc" di keyboard
-document.addEventListener("keydown", function (event) {
-  // Jika tombol yang ditekan adalah Escape
-  if (event.key === "Escape") {
-    const navMenu = document.getElementById("nav-menu");
-    // Tutup menu jika sedang terbuka
-    if (navMenu.classList.contains("active")) {
-      navMenu.classList.remove("active");
-    }
-  }
-});
-
-
-// Start the slideshow
-showSlides();
