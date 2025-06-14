@@ -488,12 +488,14 @@ input[type="date"] {
 
 /* Tombol Kirim */
 input[type="submit"] {
+  margin-top: 1rem; /* Atur jarak atas tombol */
   background: linear-gradient(135deg, #00aaff, #1e3c72);  /* Gradient biru */
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 50px;  /* Membuat tombol lebih bulat */
+  width: 100%;
   cursor: pointer;
   transition: all 0.3s ease-in-out;  /* Transisi halus */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Memberikan bayangan halus */
