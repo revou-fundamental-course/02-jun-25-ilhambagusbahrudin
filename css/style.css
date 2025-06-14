@@ -11,7 +11,9 @@ html body {
 
 /* metode lain selain memakai property overflow-x: hidden; [lihat kode css yang di komen] */
 /* Pastikan semua elemen tidak melebihi lebar viewport */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -27,21 +29,31 @@ h1 {
 
 /* Cabinet Title */
 .cabinet-title {
-  text-align: center; /* Teks di tengah */
+  text-align: center;
+  /* Teks di tengah */
   margin-top: 20px;
-  margin-bottom: 20px; /* Jarak antara teks dan wrapper */
-  font-size: 2em; /* Ukuran font */
-  font-weight: bold; /* Agar lebih tebal */
-  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
-  -webkit-background-clip: text; /* Menempelkan gradient ke teks (untuk WebKit) */
-  -moz-background-clip: text; /* Menempelkan gradient ke teks (untuk Firefox) */
-  background-clip: text; /* Menempelkan gradient ke teks (standar) */
-  color: transparent; /* Menghapus warna teks agar gradient terlihat */
+  margin-bottom: 20px;
+  /* Jarak antara teks dan wrapper */
+  font-size: 2em;
+  /* Ukuran font */
+  font-weight: bold;
+  /* Agar lebih tebal */
+  background: linear-gradient(135deg, #00aaff, #1e3c72);
+  /* Gradient biru */
+  -webkit-background-clip: text;
+  /* Menempelkan gradient ke teks (untuk WebKit) */
+  -moz-background-clip: text;
+  /* Menempelkan gradient ke teks (untuk Firefox) */
+  background-clip: text;
+  /* Menempelkan gradient ke teks (standar) */
+  color: transparent;
+  /* Menghapus warna teks agar gradient terlihat */
 }
 
 /* Optional: Style untuk <h1> di dalam cabinet-title */
 .cabinet-title h1 {
-  margin: 0; /* Menghapus margin default */
+  margin: 0;
+  /* Menghapus margin default */
 }
 
 /* Navbar */
@@ -85,7 +97,8 @@ nav .container {
 }
 
 .nav-menu a:hover {
-  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  background: linear-gradient(135deg, #00aaff, #1e3c72);
+  /* Gradient biru */
   color: #fff;
 }
 
@@ -209,17 +222,25 @@ header {
 }
 
 #profile .main-judul {
-  text-align: center; /* Teks di tengah */
+  text-align: center;
+  /* Teks di tengah */
   margin-top: 30px;
   margin-bottom: 20px;
   line-height: 1.8em;
-  font-size: 2em; /* Ukuran font */
-  font-weight: bold; /* Teks lebih tebal */
-  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
-  -webkit-background-clip: text; /* Menempelkan gradient ke teks (untuk WebKit) */
-  -moz-background-clip: text; /* Menempelkan gradient ke teks (untuk Firefox) */
-  background-clip: text; /* Menempelkan gradient ke teks (standar) */
-  color: transparent; /* Menghapus warna teks agar gradient terlihat */
+  font-size: 2em;
+  /* Ukuran font */
+  font-weight: bold;
+  /* Teks lebih tebal */
+  background: linear-gradient(135deg, #00aaff, #1e3c72);
+  /* Gradient biru */
+  -webkit-background-clip: text;
+  /* Menempelkan gradient ke teks (untuk WebKit) */
+  -moz-background-clip: text;
+  /* Menempelkan gradient ke teks (untuk Firefox) */
+  background-clip: text;
+  /* Menempelkan gradient ke teks (standar) */
+  color: transparent;
+  /* Menghapus warna teks agar gradient terlihat */
 }
 
 #profile .main-judul h1 {
@@ -229,7 +250,8 @@ header {
 
 #profile .main-foto {
   text-align: center;
-  flex: 1 1 200px; /* Flex Grow 1, Flex Shrink 1, dan Flex Basis 200px */
+  flex: 1 1 200px;
+  /* Flex Grow 1, Flex Shrink 1, dan Flex Basis 200px */
 }
 
 #profile .main-foto img {
@@ -246,7 +268,8 @@ header {
 }
 
 #profile .main-about {
-  flex: 2 1 500px; /* Flex Grow 2, Flex Shrink 1, dan Flex Basis 500px */
+  flex: 2 1 500px;
+  /* Flex Grow 2, Flex Shrink 1, dan Flex Basis 500px */
   padding: 20px;
   /* padding: 30px 150px; */
   text-align: justify;
@@ -264,20 +287,6 @@ header {
 }
 
 
-/* Message Us */
-.message_form .main-judul {
-  text-align: center; /* Teks di tengah */
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 2em; /* Ukuran font */
-  font-weight: bold; /* Teks lebih tebal */
-  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
-  -webkit-background-clip: text; /* Menempelkan gradient ke teks (untuk WebKit) */
-  -moz-background-clip: text; /* Menempelkan gradient ke teks (untuk Firefox) */
-  background-clip: text; /* Menempelkan gradient ke teks (standar) */
-  color: transparent; /* Menghapus warna teks agar gradient terlihat */
-}
-
 /* Footer */
 footer {
   padding: 40px 0;
@@ -292,17 +301,21 @@ footer .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center; /* Vertikal center */
+  align-items: center;
+  /* Vertikal center */
   width: 100%;
   padding: 0 20px;
-  margin-top: 20px; /* Menambah jarak antara footer dengan konten lainnya */
-  margin-bottom: 20px; /* Memberi jarak di bagian bawah footer */
+  margin-top: 20px;
+  /* Menambah jarak antara footer dengan konten lainnya */
+  margin-bottom: 20px;
+  /* Memberi jarak di bagian bawah footer */
 }
 
 .footer-sosmed {
   padding: 20px 50px 20px 20px;
   display: flex;
-  justify-content: flex-start; /* Di kiri */
+  justify-content: flex-start;
+  /* Di kiri */
   gap: 15px;
 }
 
@@ -344,27 +357,38 @@ footer .container {
 }
 
 .wrapper i {
-  height: 50px; /* Membesarkan ukuran untuk memperjelas tombol */
-  width: 50px; /* Membesarkan ukuran */
-  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  height: 50px;
+  /* Membesarkan ukuran untuk memperjelas tombol */
+  width: 50px;
+  /* Membesarkan ukuran */
+  background: linear-gradient(135deg, #00aaff, #1e3c72);
+  /* Gradient biru */
   text-align: center;
-  line-height: 50px; /* Menyesuaikan dengan tinggi button */
-  border-radius: 50%; /* Bentuk bulat */
+  line-height: 50px;
+  /* Menyesuaikan dengan tinggi button */
+  border-radius: 50%;
+  /* Bentuk bulat */
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.5rem; /* Membesarkan ikon */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Memberikan bayangan lebih besar */
+  font-size: 1.5rem;
+  /* Membesarkan ikon */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  /* Memberikan bayangan lebih besar */
   z-index: 0;
-  transition: all 0.3s ease-in-out; /* Transisi halus saat perubahan */
-  border: 2px solid #fff; /* Border putih untuk kontras */
+  transition: all 0.3s ease-in-out;
+  /* Transisi halus saat perubahan */
+  border: 2px solid #fff;
+  /* Border putih untuk kontras */
 }
 
 /* Efek hover */
 .wrapper i:hover {
-  transform: translateY(-50%) scale(1.1); /* Memberikan efek zoom sedikit */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Meningkatkan bayangan saat hover */
+  transform: translateY(-50%) scale(1.1);
+  /* Memberikan efek zoom sedikit */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  /* Meningkatkan bayangan saat hover */
 }
 
 /* Untuk tombol kiri */
@@ -458,73 +482,119 @@ footer .container {
 
 
 /* Message Us */
+#message-form .main-judul {
+  text-align: center;
+  /* Teks di tengah */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  /* Ukuran font */
+  font-weight: bold;
+  /* Teks lebih tebal */
+  background: linear-gradient(135deg, #00aaff, #1e3c72);
+  /* Gradient biru */
+  -webkit-background-clip: text;
+  /* Menempelkan gradient ke teks (untuk WebKit) */
+  -moz-background-clip: text;
+  /* Menempelkan gradient ke teks (untuk Firefox) */
+  background-clip: text;
+  /* Menempelkan gradient ke teks (standar) */
+  color: transparent;
+  /* Menghapus warna teks agar gradient terlihat */
+}
+
 .main-pesan {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;   /* Ini penting */
-  max-width: 1000px;         /* Atur lebar maksimal */
-  margin: 0 auto;            /* Ini juga penting */
-  padding: 0 20px;           /* Tambahan agar ada ruang kiri-kanan */
+  justify-content: center;
+  /* Ini penting */
+  max-width: 1000px;
+  /* Atur lebar maksimal */
+  margin: 0 auto;
+  /* Ini juga penting */
+  padding: 0 20px;
+  /* Tambahan agar ada ruang kiri-kanan */
 }
 
-.main-form, .main-data {
+.main-form,
+.main-data {
   flex: 1;
   min-width: 300px;
   margin-bottom: 15rem;
 }
+
 .main-form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
 }
+
 label {
   margin-bottom: 0.3rem;
 }
-textarea, input[type="text"], input[type="date"] {
+
+textarea,
+input[type="text"],
+input[type="date"] {
   padding: 0.5rem;
   font-size: 1rem;
 }
+
 .gender-options {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
+
 .main-data table {
   width: 100%;
   border-collapse: collapse;
 }
+
 .main-data td {
   padding: 0.5rem;
 }
+
 /* Tombol Kirim */
 input[type="submit"] {
-  background: linear-gradient(135deg, #00aaff, #1e3c72); /* Gradient biru */
+  background: linear-gradient(135deg, #00aaff, #1e3c72);
+  /* Gradient biru */
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  border-radius: 50px; /* Membuat tombol lebih bulat */
+  border-radius: 50px;
+  /* Membuat tombol lebih bulat */
   cursor: pointer;
-  transition: all 0.3s ease-in-out; /* Transisi halus */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
+  transition: all 0.3s ease-in-out;
+  /* Transisi halus */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Memberikan bayangan halus */
 }
- /* Efek saat hover */
-      input[type="submit"]:hover {
-        background: linear-gradient(135deg, #1e3c72, #00aaff); /* Membalik gradient saat hover */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Meningkatkan bayangan */
-        transform: scale(1.05); /* Memberikan efek membesar saat hover */
-      }
 
-      /* Efek saat klik */
-      input[type="submit"]:active {
-        transform: scale(1); /* Mengembalikan ukuran tombol setelah diklik */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Mengurangi bayangan saat tombol ditekan */
-      }
+/* Efek saat hover */
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #1e3c72, #00aaff);
+  /* Membalik gradient saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Meningkatkan bayangan */
+  transform: scale(1.05);
+  /* Memberikan efek membesar saat hover */
+}
+
+/* Efek saat klik */
+input[type="submit"]:active {
+  transform: scale(1);
+  /* Mengembalikan ukuran tombol setelah diklik */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  /* Mengurangi bayangan saat tombol ditekan */
+}
 
 @media (max-width: 600px) {
   .carousel {
@@ -535,13 +605,14 @@ input[type="submit"] {
   }
 
   .carousel .card {
-    width: 100%; /* agar cukup lebar di layar kecil */
+    width: 100%;
+    /* agar cukup lebar di layar kecil */
   }
 
   .wrapper .carousel {
-        grid-auto-columns: 100%;
+    grid-auto-columns: 100%;
 
-    }
+  }
 
   .card .img {
     width: 120px;
@@ -560,20 +631,25 @@ input[type="submit"] {
   .card span {
     font-size: 0.9rem;
   }
+
   .nav-menu ul {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+
   .nav-menu ul li {
     margin: 10px 0;
   }
+
   .nav-toggle {
     display: block;
   }
+
   /* Adjust navbar layout for small screens */
   .nav-menu {
-    display: none; /* Hide navbar by default */
+    display: none;
+    /* Hide navbar by default */
     width: 100%;
     background-color: #fff;
     position: absolute;
@@ -582,24 +658,30 @@ input[type="submit"] {
     flex-direction: column;
     text-align: center;
   }
+
   .nav-menu.active {
     display: flex;
   }
 
   #profile .container {
-    flex-direction: column; /* Mengubah layout jadi kolom untuk perangkat kecil */
-    align-items: center; /* Memastikan konten di dalam container tetap terpusat */
+    flex-direction: column;
+    /* Mengubah layout jadi kolom untuk perangkat kecil */
+    align-items: center;
+    /* Memastikan konten di dalam container tetap terpusat */
   }
 
   /* Main Foto */
   .main-foto {
-    flex: 0 1 200px; /* Membuat foto profil tetap di tengah */
-    margin-bottom: 20px; /* Menambah jarak antara foto dengan deskripsi */
+    flex: 0 1 200px;
+    /* Membuat foto profil tetap di tengah */
+    margin-bottom: 20px;
+    /* Menambah jarak antara foto dengan deskripsi */
   }
 
   /* Main About */
   .main-about {
-    flex: 1 1 100%; /* Menjadikan deskripsi mengambil 100% lebar kontainer */
+    flex: 1 1 100%;
+    /* Menjadikan deskripsi mengambil 100% lebar kontainer */
     padding: 20px;
     text-align: center;
     margin-top: 20px;
@@ -614,14 +696,16 @@ input[type="submit"] {
   footer .container {
     flex-direction: column;
     text-align: center;
-    padding: 20px; /* Tambahkan padding di footer untuk mobile */
-    margin-top: 20px; /* Jarak footer dengan konten di atasnya */
+    padding: 20px;
+    /* Tambahkan padding di footer untuk mobile */
+    margin-top: 20px;
+    /* Jarak footer dengan konten di atasnya */
   }
-  
+
   .footer-sosmed a {
     margin: 5px;
   }
-  
+
   footer .footer-program {
     padding: 10px;
     font-size: 1em;
