@@ -18,7 +18,7 @@ html body {
 }
 
 
-/* Navbar */
+/* Navbar Homepage */
 nav {
   height: 60px;
   border-bottom: 2px solid black;
@@ -204,7 +204,7 @@ header .slideshow-container {
 }
 
 
-/* Wrapper untuk Draggable Card Slider*/
+/* Wrapper untuk Draggable Card Slider */
 .wrapper {
   max-width: 70%;
   /* width: 100%; */
@@ -258,7 +258,6 @@ header .slideshow-container {
   scroll-behavior: smooth;
   overflow-x: auto;
 }
-
 
 .wrapper .carousel {
   display: grid;
