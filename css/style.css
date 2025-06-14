@@ -184,6 +184,12 @@ header .slideshow-container {
 
 
 /* Cabinet Title */
+/* mengatasi Link Anchor yang tidak menuju teks The Cabinet di index.html */
+#cabinet-title {
+  scroll-margin-top: 80px; /* sesuaikan dengan tinggi navbar kamu */
+}
+
+
 .cabinet-title {
   text-align: center;  /* Teks di tengah */
   margin-top: 20px;
@@ -390,6 +396,11 @@ header .slideshow-container {
 
 
 /* Message Us */
+/* mengatasi Link Anchor yang tidak menuju teks Isi data diri dan pesan Anda! di index.html */
+#message-form {
+  scroll-margin-top: 100px; /* Sesuaikan nilainya dengan tinggi navbar kamu */
+}
+
 #message-form .main-judul {
   text-align: center;
   /* Teks di tengah */
