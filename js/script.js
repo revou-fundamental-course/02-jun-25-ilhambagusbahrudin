@@ -162,10 +162,26 @@ function kirim() {
     return false;
   }
 
+  if (nama.length < 3) {
+    alert("Nama minimal 3 karakter.");
+    return false;
+  }
+
+  if (!/^[a-zA-Z\s]+$/.test(nama)) {
+    alert("Nama hanya boleh huruf dan spasi.");
+    return false;
+  }
+
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(ttl)) {
+    alert("Tanggal lahir tidak valid.");
+    return false;
+  }
+
   // DOM element lalu diberi isi dari form
   document.getElementById("waktu").innerText = waktuIni;
   document.getElementById("nama2").innerText = nama;
   document.getElementById("ttl2").innerText = ttl;
   document.getElementById("gender2").innerText = gender;
   document.getElementById("pesan2").innerText = pesan;
+
 }

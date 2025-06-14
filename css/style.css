@@ -18,6 +18,9 @@ html body {
 }
 
 
+
+
+
 /* Navbar Homepage */
 nav {
   height: 60px;
@@ -92,6 +95,9 @@ nav .container {
   flex-direction: row;
   justify-content: flex-end;
 }
+
+
+
 
 
 /* Header */
@@ -183,12 +189,14 @@ header .slideshow-container {
 } */
 
 
-/* Cabinet Title */
+
+
+
+/* The Cabinet */
 /* mengatasi Link Anchor yang tidak menuju teks The Cabinet di index.html */
 #cabinet-title {
   scroll-margin-top: 80px; /* sesuaikan dengan tinggi navbar kamu */
 }
-
 
 .cabinet-title {
   text-align: center;  /* Teks di tengah */
@@ -208,6 +216,9 @@ header .slideshow-container {
   margin: 0;
   /* Menghapus margin default */
 }
+
+
+
 
 
 /* Wrapper untuk Draggable Card Slider */
@@ -336,6 +347,9 @@ header .slideshow-container {
 }
 
 
+
+
+
 /* Profil Saya */
 #profile {
   padding: 40px 0;
@@ -395,52 +409,11 @@ header .slideshow-container {
 }
 
 
+
+
+
 /* Message Us */
 /* mengatasi Link Anchor yang tidak menuju teks Isi data diri dan pesan Anda! di index.html */
-/* Form Card Layout */
-.form-card-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.form-card {
-  display: flex;
-  flex-direction: row;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  max-width: 1000px;
-  width: 100%;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.form-left,
-.form-right {
-  flex: 1;
-  min-width: 280px;
-}
-
-.form-left h2,
-.form-right h2 {
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-  border-bottom: 2px solid #1e3c72;
-  padding-bottom: 5px;
-}
-
-.form-right table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.form-right td {
-  padding: 8px 0;
-  vertical-align: top;
-}
-
 #message-form {
   scroll-margin-top: 100px; /* Sesuaikan nilainya dengan tinggi navbar kamu */
 }
@@ -539,6 +512,75 @@ input[type="submit"]:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);  /* Mengurangi bayangan saat tombol ditekan */
 }
 
+/* Fade-in animasi */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan animasi ke card */
+.form-card {
+  animation: fadeInUp 0.8s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.form-card:hover {
+  transform: scale(1.02);
+}
+
+/* Form Card Layout */
+.form-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-left,
+.form-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.form-left h2,
+.form-right h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #1e3c72;
+  padding-bottom: 5px;
+}
+
+.form-right table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-right td {
+  padding: 8px 0;
+  vertical-align: top;
+}
+
+
+
+
 
 /* Footer */
 footer {
@@ -591,6 +633,9 @@ footer .container {
   text-align: center;
   font-size: 0.9em;
 }
+
+
+
 
 
 @media (max-width: 600px) {

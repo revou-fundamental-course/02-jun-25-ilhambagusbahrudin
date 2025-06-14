@@ -208,7 +208,9 @@
         <form name="message-form" onsubmit="kirim(); return false;">
           <div class="form-group">
             <label for="nama">Nama</label>
-            <input type="text" name="nama" required />
+            <!-- <input type="text" name="nama" required /> -->
+            <input type="text" name="nama" id="nama" required minlength="3" placeholder="Nama lengkap">
+
           </div>
           <div class="form-group">
             <label for="ttl">Tanggal Lahir</label>
