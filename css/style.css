@@ -397,6 +397,50 @@ header .slideshow-container {
 
 /* Message Us */
 /* mengatasi Link Anchor yang tidak menuju teks Isi data diri dan pesan Anda! di index.html */
+/* Form Card Layout */
+.form-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-left,
+.form-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.form-left h2,
+.form-right h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #1e3c72;
+  padding-bottom: 5px;
+}
+
+.form-right table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-right td {
+  padding: 8px 0;
+  vertical-align: top;
+}
+
 #message-form {
   scroll-margin-top: 100px; /* Sesuaikan nilainya dengan tinggi navbar kamu */
 }
@@ -639,6 +683,18 @@ footer .container {
   /* Teks di dalam .main-about lebih kecil untuk mobile */
   .main-about p {
     font-size: 0.9rem;
+  }
+
+
+  /* Message Us */
+  .form-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .form-left,
+  .form-right {
+    min-width: 100%;
   }
 
 

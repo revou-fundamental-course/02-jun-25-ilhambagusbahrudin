@@ -198,80 +198,49 @@
 
   <!-- Message Form -->
   <section id="message-form">
-    <main>
-      <!--  -->
-      <div class="container">
-        <!--  -->
-        <div class="main-judul">
-          <h1>Isi data diri dan pesan Anda!</h1>
-        </div>
-        <!--  -->
-        <div class="main-pesan">
-          <!-- Input Data -->
-          <div class="main-form">
-            <form name="message-form" onsubmit="kirim(); return false">
-              <!-- Input Nama -->
-              <div class="form-group">
-                <label for="nama">Nama</label>
-                <input type="text" name="nama" id="nama" required>
-              </div>
-              <!-- Input Tanggal Lahir -->
-              <div class="form-group">
-                <label for="ttl">Tanggal Lahir</label>
-                <input type="date" name="ttl" id="ttl" required>
-              </div>
-              <!-- Input Jenis Kelamin -->
-              <div class="form-group">
-                <label for="gender">Jenis Kelamin</label>
-                <div class="gender-options">
-                  <input type="radio" name="gender" id="laki-laki" value="Laki-laki" required>
-                  <label for="laki-laki">Laki-laki</label>
-                  <input type="radio" name="gender" id="perempuan" value="Perempuan" required>
-                  <label for="perempuan">Perempuan</label>
-                </div>
-              </div>
-              <!-- Input Pesan -->
-              <div class="form-group">
-                <label for="pesan">Pesan</label>
-                <textarea name="pesan" id="pesan" cols="30" rows="5" required></textarea>
-              </div>
-              <!-- Button submit (tombol kirim) -->
-              <div class="form-group">
-                <input type="submit" name="submit" value="Kirim">
-              </div>
-            </form>
+  <div class="main-judul">
+    <h1>Isi data diri dan pesan Anda!</h1>
+  </div>
+  <div class="form-card-container">
+    <div class="form-card">
+      <div class="form-left">
+        <h2>Formulir</h2>
+        <form name="message-form" onsubmit="kirim(); return false;">
+          <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" name="nama" required />
           </div>
-          <!-- Output Data -->
-          <div class="main-data">
-            <table>
-              <tbody>
-                <tr class="td-waktu">
-                  <td><label for="waktu">Waktu</label></td>
-                  <td><span id="waktu"></span></td>
-                </tr>
-                <tr>
-                  <td><label for="nama2">Nama</label></td>
-                  <td><span id="nama2"></span></td>
-                </tr>
-                <tr>
-                  <td><label for="ttl2">Tanggal Lahir</label></td>
-                  <td><span id="ttl2"></span></td>
-                </tr>
-                <tr>
-                  <td><label for="gender2">Jenis Kelamin</label></td>
-                  <td><span id="gender2"></span></td>
-                </tr>
-                <tr>
-                  <td><label for="pesan2">Pesan</label></td>
-                  <td><span id="pesan2"></span></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="form-group">
+            <label for="ttl">Tanggal Lahir</label>
+            <input type="date" name="ttl" required />
           </div>
-        </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="gender-options">
+              <label><input type="radio" name="gender" value="Laki-laki" required /> Laki-laki</label>
+              <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pesan">Pesan</label>
+            <textarea name="pesan" rows="3" required></textarea>
+          </div>
+          <input type="submit" value="Kirim" />
+        </form>
       </div>
-    </main>
-  </section>
+      <div class="form-right">
+        <h2>Data Anda</h2>
+        <table>
+          <tr><td>Waktu</td><td>: <span id="waktu"></span></td></tr>
+          <tr><td>Nama</td><td>: <span id="nama2"></span></td></tr>
+          <tr><td>TTL</td><td>: <span id="ttl2"></span></td></tr>
+          <tr><td>Gender</td><td>: <span id="gender2"></span></td></tr>
+          <tr><td>Pesan</td><td>: <span id="pesan2"></span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   <!-- footer -->
