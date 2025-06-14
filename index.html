@@ -304,9 +304,31 @@
 
   <!-- Pop Up Javascript -->
   <script>
+    // Cek apakah nama pengguna sudah disimpan di localStorage
+    let storedName = localStorage.getItem("username");
+
+    if (!storedName) {
+      // Jika belum, tampilkan prompt dan simpan hasilnya
+      let userName = prompt("Masukkan nama Anda di bawah!");
+      if (userName) {
+        localStorage.setItem("username", userName);
+        document.getElementById("username").innerText = userName;
+      } else {
+        document.getElementById("username").innerText = "Pengunjung";
+      }
+    } else {
+      // Jika sudah, langsung tampilkan nama yang disimpan
+      document.getElementById("username").innerText = storedName;
+    }
+  </script>
+
+
+  <!-- Pop Up Javascript -->
+  <!-- Pop Up bermasalah, selalu muncul tiap kali refresh halaman -->
+  <!-- <script>
     let userName = prompt("Masukkan nama Anda dibawah!");
     document.getElementById("username").innerText = userName;
-  </script>
+  </script> -->
 
   <!-- file script.js (javascript) -->
   <script src="js/script.js"></script>
