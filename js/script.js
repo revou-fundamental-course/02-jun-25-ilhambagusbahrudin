@@ -154,5 +154,18 @@ function currentSlide(n) {
   showSlides();
 }
 
+// toggle menu (hamburger menu) menutup ketika klik "Esc" di keyboard
+document.addEventListener("keydown", function (event) {
+  // Jika tombol yang ditekan adalah Escape
+  if (event.key === "Escape") {
+    const navMenu = document.getElementById("nav-menu");
+    // Tutup menu jika sedang terbuka
+    if (navMenu.classList.contains("active")) {
+      navMenu.classList.remove("active");
+    }
+  }
+});
+
+
 // Start the slideshow
 showSlides();
