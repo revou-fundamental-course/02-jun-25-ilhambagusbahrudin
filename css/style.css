@@ -17,35 +17,6 @@ html body {
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 99.2%;
-  margin: 0px auto;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 1.5em;
-}
-
-/* Cabinet Title */
-.cabinet-title {
-  text-align: center;  /* Teks di tengah */
-  margin-top: 20px;
-  margin-bottom: 20px;  /* Jarak antara teks dan wrapper */
-  font-size: 2em;  /* Ukuran font */
-  font-weight: bold;  /* Agar lebih tebal */
-  background: linear-gradient(135deg, #00aaff, #1e3c72);  /* Gradient biru */
-  -webkit-background-clip: text;  /* Menempelkan gradient ke teks (untuk WebKit) */
-  -moz-background-clip: text;  /* Menempelkan gradient ke teks (untuk Firefox) */
-  background-clip: text;  /* Menempelkan gradient ke teks (standar) */
-  color: transparent;  /* Menghapus warna teks agar gradient terlihat */
-}
-
-/* Optional: Style untuk <h1> di dalam cabinet-title */
-.cabinet-title h1 {
-  margin: 0;
-  /* Menghapus margin default */
-}
 
 /* Navbar */
 nav {
@@ -57,17 +28,22 @@ nav {
   z-index: 9999;
 }
 
+#navbar-homepage .container {
+  max-width: 99.2%;
+  margin: 0px auto;
+}
+
 nav .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav-logo {
+#navbar-homepage .nav-logo {
   padding-top: 4px;
 }
 
-.nav-menu {
+#navbar-homepage .nav-menu {
   line-height: 30px;
 }
 
@@ -94,7 +70,7 @@ nav .container {
 }
 
 /* Toggle (Hamburger Menu) */
-.nav-toggle {
+#navbar-homepage .nav-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
@@ -107,7 +83,7 @@ nav .container {
 }
 
 /* Toggle navbar ketika diklik */
-.nav-menu.active {
+#navbar-homepage .nav-menu.active {
   display: flex;
 }
 
@@ -116,6 +92,7 @@ nav .container {
   flex-direction: row;
   justify-content: flex-end;
 }
+
 
 /* Header */
 header {
@@ -142,7 +119,7 @@ header {
 }
 
 /* Slideshow styles */
-.slideshow-container {
+header .slideshow-container {
   position: relative;
   height: 600px;
   overflow: hidden;
@@ -206,19 +183,13 @@ header {
 } */
 
 
-/* Profil Saya */
-#profile {
-  padding: 40px 0;
-  background-color: #f9f9f9;
-}
-
-#profile .main-judul {
+/* Cabinet Title */
+.cabinet-title {
   text-align: center;  /* Teks di tengah */
-  margin-top: 30px;
-  margin-bottom: 20px;
-  line-height: 1.8em;
+  margin-top: 20px;
+  margin-bottom: 20px;  /* Jarak antara teks dan wrapper */
   font-size: 2em;  /* Ukuran font */
-  font-weight: bold;  /* Teks lebih tebal */
+  font-weight: bold;  /* Agar lebih tebal */
   background: linear-gradient(135deg, #00aaff, #1e3c72);  /* Gradient biru */
   -webkit-background-clip: text;  /* Menempelkan gradient ke teks (untuk WebKit) */
   -moz-background-clip: text;  /* Menempelkan gradient ke teks (untuk Firefox) */
@@ -226,96 +197,12 @@ header {
   color: transparent;  /* Menghapus warna teks agar gradient terlihat */
 }
 
-#profile .main-judul h1 {
-  padding: 10px;  /* text-align: center; */
+/* Optional: Style untuk <h1> di dalam cabinet-title */
+.cabinet-title h1 {
+  margin: 0;
+  /* Menghapus margin default */
 }
 
-#profile .main-foto {
-  text-align: center;
-  flex: 1 1 200px;  /* Flex Grow 1, Flex Shrink 1, dan Flex Basis 200px */
-}
-
-#profile .main-foto img {
-  width: 180px;
-  height: 180px;
-  border-radius: 25px;  /* border-radius: 50%; */
-  margin-bottom: 10px;
-}
-
-#profile .main-foto span {
-  font-size: 14px;
-  display: block;
-}
-
-#profile .main-about {
-  flex: 2 1 500px;  /* Flex Grow 2, Flex Shrink 1, dan Flex Basis 500px */
-  padding: 20px;  /* padding: 30px 150px; */
-  text-align: justify;
-  line-height: 1.6em;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
-}
-
-#profile .main-about p {
-  font-family: sans-serif;
-  margin-bottom: 10px;
-  font-weight: 100;
-}
-
-
-/* Footer */
-footer {
-  padding: 40px 0;
-  line-height: 1.5;
-  border-top: 2px solid black;
-  font-size: 13px;
-  font-style: italic;
-  background-color: #fff;
-}
-
-footer .container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;  /* Vertikal center */
-  width: 100%;
-  padding: 0 20px;
-  margin-top: 20px;  /* Menambah jarak antara footer dengan konten lainnya */
-  margin-bottom: 20px;  /* Memberi jarak di bagian bawah footer */
-}
-
-.footer-sosmed {
-  padding: 20px 50px 20px 20px;
-  display: flex;
-  justify-content: flex-start;  /* Di kiri */
-  gap: 15px;
-}
-
-.footer-sosmed a i {
-  font-size: 24px;
-  transition: font-size 0.3s ease;
-}
-
-.footer-sosmed a i:hover {
-  font-size: 30px;
-}
-
-.footer-program {
-  padding: 5px 50px 20px 20px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.1em;
-  flex-grow: 1;
-}
-
-.footer-copyright {
-  padding: 5px 50px 20px 20px;
-  text-align: center;
-  font-size: 0.9em;
-}
 
 /* Wrapper untuk Draggable Card Slider*/
 .wrapper {
@@ -444,6 +331,65 @@ footer .container {
 }
 
 
+/* Profil Saya */
+#profile {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+#profile .main-judul {
+  text-align: center;  /* Teks di tengah */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  line-height: 1.8em;
+  font-size: 2em;  /* Ukuran font */
+  font-weight: bold;  /* Teks lebih tebal */
+  background: linear-gradient(135deg, #00aaff, #1e3c72);  /* Gradient biru */
+  -webkit-background-clip: text;  /* Menempelkan gradient ke teks (untuk WebKit) */
+  -moz-background-clip: text;  /* Menempelkan gradient ke teks (untuk Firefox) */
+  background-clip: text;  /* Menempelkan gradient ke teks (standar) */
+  color: transparent;  /* Menghapus warna teks agar gradient terlihat */
+}
+
+#profile .main-judul h1 {
+  padding: 10px;  /* text-align: center; */
+}
+
+#profile .main-foto {
+  text-align: center;
+  flex: 1 1 200px;  /* Flex Grow 1, Flex Shrink 1, dan Flex Basis 200px */
+}
+
+#profile .main-foto img {
+  width: 180px;
+  height: 180px;
+  border-radius: 25px;  /* border-radius: 50%; */
+  margin-bottom: 10px;
+}
+
+#profile .main-foto span {
+  font-size: 14px;
+  display: block;
+}
+
+#profile .main-about {
+  flex: 2 1 500px;  /* Flex Grow 2, Flex Shrink 1, dan Flex Basis 500px */
+  padding: 20px;  /* padding: 30px 150px; */
+  text-align: justify;
+  line-height: 1.6em;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+#profile .main-about p {
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+
+
 /* Message Us */
 #message-form .main-judul {
   text-align: center;
@@ -539,7 +485,94 @@ input[type="submit"]:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);  /* Mengurangi bayangan saat tombol ditekan */
 }
 
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  line-height: 1.5;
+  border-top: 2px solid black;
+  font-size: 13px;
+  font-style: italic;
+  background-color: #fff;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;  /* Vertikal center */
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 20px;  /* Menambah jarak antara footer dengan konten lainnya */
+  margin-bottom: 20px;  /* Memberi jarak di bagian bawah footer */
+}
+
+.footer-sosmed {
+  padding: 20px 50px 20px 20px;
+  display: flex;
+  justify-content: flex-start;  /* Di kiri */
+  gap: 15px;
+}
+
+.footer-sosmed a i {
+  font-size: 24px;
+  transition: font-size 0.3s ease;
+}
+
+.footer-sosmed a i:hover {
+  font-size: 30px;
+}
+
+.footer-program {
+  padding: 5px 50px 20px 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1em;
+  flex-grow: 1;
+}
+
+.footer-copyright {
+  padding: 5px 50px 20px 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+
 @media (max-width: 600px) {
+  /* Navbar Homepage */
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  #navbar-homepage .nav-toggle {
+    display: block;
+  }
+
+  /* Sesuaikan layout navbar untuk layar kecil */
+  .nav-menu {
+    display: none;    /* sembunyikan navbar secara default */
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+
+  /* Draggable Card Slider */
   .carousel {
     grid-auto-columns: 100%;
     align-items: center;
@@ -574,48 +607,18 @@ input[type="submit"]:active {
     font-size: 0.9rem;
   }
 
-  .nav-menu ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
 
-  .nav-menu ul li {
-    margin: 10px 0;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  /* Adjust navbar layout for small screens */
-  .nav-menu {
-    display: none;    /* Hide navbar by default */
-    width: 100%;
-    background-color: #fff;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
+  /* Profil Saya */
   #profile .container {
     flex-direction: column;    /* Mengubah layout jadi kolom untuk perangkat kecil */
     align-items: center;    /* Memastikan konten di dalam container tetap terpusat */
   }
 
-  /* Main Foto */
   .main-foto {
     flex: 0 1 200px;    /* Membuat foto profil tetap di tengah */
     margin-bottom: 20px;    /* Menambah jarak antara foto dengan deskripsi */
   }
 
-  /* Main About */
   .main-about {
     flex: 1 1 100%;    /* Menjadikan deskripsi mengambil 100% lebar kontainer */
     padding: 20px;
@@ -627,6 +630,7 @@ input[type="submit"]:active {
   .main-about p {
     font-size: 0.9rem;
   }
+
 
   /* footer */
   footer .container {
