@@ -140,23 +140,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Isi Data Diri (Message Us)
 function kirim() {
-  // array nama bulan
-  const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "Desember"];
-
-  // membuat waktu saat ini
+  const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+  
   let date = new Date();
-  let tanggal = date.getDate() + " " + (bulan[date.getMonth()]) + " " + date.getFullYear();
-  let jam = date.getHours() + ":" + date.getMinutes();
+  let tanggal = date.getDate() + " " + bulan[date.getMonth()] + " " + date.getFullYear();
+  let jam = date.getHours().toString().padStart(2, "0") + ":" + date.getMinutes().toString().padStart(2, "0");
+  let waktuIni = jam + ", " + tanggal;
 
-  waktuIni = jam + ", " + tanggal
+  let form = document.forms["message-form"];
+  let nama = form["nama"].value.trim();
+  let ttl = form["ttl"].value;
+  let gender = form["gender"].value;
+  let pesan = form["pesan"].value.trim();
 
-  // mengambil data input fom
-  let nama = document.forms["message-form"]["nama"].value;
-  let ttl = document.forms["message-form"]["ttl"].value;
-  let gender = document.forms["message-form"]["gender"].value;
-  let pesan = document.forms["message-form"]["pesan"].value;
-
-  // validasi form ke-2 | validasi form pertama memakai atribut required pada tag input form
+  // Validasi
   if (nama === "" || ttl === "" || gender === "" || pesan === "") {
     alert("Input form tidak boleh kosong!");
     return false;
@@ -177,11 +174,15 @@ function kirim() {
     return false;
   }
 
-  // DOM element lalu diberi isi dari form
+  // Menampilkan data ke DOM
   document.getElementById("waktu").innerText = waktuIni;
   document.getElementById("nama2").innerText = nama;
   document.getElementById("ttl2").innerText = ttl;
   document.getElementById("gender2").innerText = gender;
   document.getElementById("pesan2").innerText = pesan;
 
+  // Reset form
+  form.reset();
+
+  return false; // Mencegah form reload (jika pakai form action)
 }
